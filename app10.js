@@ -70,8 +70,8 @@ const cardsDisplay = (cards) => {
 
 
 //ekhn show details button niye kaj korbo
-const cardDetails = () => {
-    console.log('done');
+const cardDetails = (code) => {
+    console.log(code);
 }
 //jekono see details ee click korlei done show kortese
 //ekhon console log eo ek ek ta seedetails e click korle ek ek ta show kortese
