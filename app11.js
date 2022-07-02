@@ -71,7 +71,33 @@ const cardsDisplay = (cards) => {
 
 //ekhn show details button niye kaj korbo
 const cardDetails = (code) => {
-    console.log(code);
+    // console.log(code);
+    fetch(`https://deckofcardsapi.com/api/deck/new/draw/?count=52`)
+        //ei jinish ta upr theke abr boshalam
+        .then(res => res.json())
+
+        .then(data => {
+            const allCards = data.cards;
+            // console.log(allCards);
+            const singleCrad = allCards.find(card => card.code === code)
+            // console.log(singleCrad);
+            const div = document.createElement('div');
+            main.innerHTML = "";
+            div.innerHTML = `
+        <div class="card" style="width: 18rem;">
+<img src="${singleCrad.image}" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">${singleCrad.suit}</h5>
+    <p class="card-text">${singleCrad.code}</p>
+    <p class="card-text">${singleCrad.value}</p>
+    
+</div>
+</div>
+        `
+            main.appendChild(div);
+            //ekhane button ta remove kore disi
+        })
+    //same kaj tai just alada vabe declare kore korlam
 
 }
 //jekono see details ee click korlei done show kortese
