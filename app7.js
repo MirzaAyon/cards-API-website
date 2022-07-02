@@ -42,13 +42,30 @@ const cardsDisplay = (cards) => {
 
     for (const card of cards) {
         console.log(card);
-        console.log(card.image);
-        console.log(card.code);
+        // console.log(card.image);
+        // console.log(card.code);
+
+        const div = document.createElement('div');
+        div.classList.add('col-lg-4');
+        div.classList.add('mb-5');
+        div.innerHTML = `
+        <div class="card" style="width: 18rem;">
+  <img src="${card.image}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${card.suit}</h5>
+    <p class="card-text">${card.code}</p>
+    <button href="#" class="btn btn-primary">See details  </button>
+  </div>
+</div>
+
+        `
+        main.appendChild(div);
     }
 
 
     //object ke for of loop dewa jabe na tai age array take dhorte hbe 
 }
-// for of loop chaliachi
-//now all objects are showing
+// for of loop done
+//2nd method porer file e ache
+//with more error handling app8 e
 
