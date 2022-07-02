@@ -55,7 +55,7 @@ const cardsDisplay = (cards) => {
   <div class="card-body">
     <h5 class="card-title">${card.suit}</h5>
     <p class="card-text">${card.code}</p>
-    <button href="#" class="btn btn-primary">See details  </button>
+    <button onclick="cardDetails()" href="#" class="btn btn-primary">See details  </button>
   </div>
 </div>
 
