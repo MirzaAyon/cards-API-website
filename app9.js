@@ -70,3 +70,7 @@ const cardsDisplay = (cards) => {
 
 
 //ekhn show details button niye kaj korbo
+const cardDetails = () => {
+    console.log('done');
+}
+//jekono see details ee click korlei done show kortese
